@@ -18,3 +18,4 @@ for r in results:
     ftls = [f.get("url") for f in r.get("bibjson", {}).get("link", []) if f.get("type") == "fulltext"]
     for ftl in ftls:
         resp = requests.get(ftl)
+        
